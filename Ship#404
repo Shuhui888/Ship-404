@@ -1,0 +1,2749 @@
+using System;
+       public interface IScene {
+       public IScene scene_contents();
+       }
+
+public class main {
+       public static string username = "";
+  public static int Crew = 1; 
+  public static int Kea = 1; 
+  public static int Clown = 1; 
+  public static int Worm = 1; 
+  public static int Alone =1;
+
+      public static string getUserInput() {
+                    string? input;
+
+             do {
+               input = Console.ReadLine();
+             } while (string.IsNullOrEmpty(input));
+
+             return input;
+              }
+
+       public static IScene options(IScene a, IScene b, IScene c) {
+                    do {
+               string option = getUserInput();
+
+               if (option == "1" && a != null) {
+                 return a;
+               } else if (option == "2" && b != null) {
+                 return b;
+               } else if (option == "3" && c != null) {
+                 return c;
+               } else {
+                 Console.WriteLine("Invalid input, please try again");
+               }
+             } while (true);
+         return main.options(new Scene1(), new Scene0(), null);
+       }
+
+       public static void Main() {
+                    IScene current_scene = new Scene1();
+
+             while (current_scene != null) {
+                  current_scene = current_scene.scene_contents();
+
+             }
+       }
+  }
+
+public class Scene1 : IScene {
+       public IScene scene_contents() { 
+         Console.Clear();
+         Console.ForegroundColor = ConsoleColor.White; 
+         Console.Write("SHIP");
+         Console.ForegroundColor = ConsoleColor.DarkGray; 
+         Console.WriteLine("#404");
+         Console.ForegroundColor = ConsoleColor.DarkRed; 
+         Console.WriteLine("Press any key to began game. . .");
+         Console.ReadLine();
+         Console.Clear();
+         Console.ForegroundColor = ConsoleColor.White; 
+              Console.WriteLine("Hello Player.");  
+              Console.WriteLine("Welcome aboard to ship #404.");  
+              Console.WriteLine("All passengers please follow the instructions given by the officers and crew...");  
+              Console.ForegroundColor = ConsoleColor.Blue; 
+              Console.WriteLine("1. We will arrive in 2 days, please survive until then. ");  
+              Console.WriteLine("2. Every passenger is not allowed to leave your cabin after ten p.m. Do not open your door until 7 a.m. ");  
+              Console.WriteLine("Don't go wandering around alone, you will get lost."); 
+              Console.WriteLine("3. If Passenger notices that there's someone watching you outside the window, ignore it, do not shut the window because of fear. ");  
+              Console.WriteLine("4. On this ship, all the crewmates and officers wear blue. ");  
+              Console.WriteLine("5. The cafeteria is open from 7-8, 12-13, and 17-18. Please do not go to the cafeteria at other times. ");  
+
+              Console.WriteLine("6. Please take good care of your wristband, it is the only key to open your cabin door. ");  
+
+              Console.WriteLine("7. The Wi-Fi aboard is NOT free, you are only able to pay for Wi-Fi once a day, the free Wi-Fi is for the crew. ");  
+
+              Console.WriteLine("8. There is a performance from 2-6 pm, all passengers have to be there, ones that aren't there would suffocate. "); 
+
+              Console.WriteLine("9. Always be aware of the time, don't sleep pass the performance.  "); 
+
+              Console.ForegroundColor = ConsoleColor.White; 
+
+              Console.WriteLine("Failure to comply with these rules will result in death, please be aware of this. Enjoy your journey! ");  
+
+              Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+              Console.WriteLine("Press any key to continue...");  
+
+              Console.ReadLine();
+              Console.Clear();
+         Console.ForegroundColor = ConsoleColor.White; 
+
+              Console.WriteLine("...");  
+
+              Console.WriteLine("You are: ");  
+
+              main.username = main.getUserInput();
+
+              Console.ForegroundColor = ConsoleColor.DarkGreen; 
+              Console.Clear();
+
+              Console.WriteLine("'Hi,"+ main.username + "! Here's your wristband! I'm Kea, I will be your roommate for the following days! We are at cabin 13! Let's go!' ");  
+
+              Console.ForegroundColor = ConsoleColor.White; 
+
+              Console.WriteLine("You are travelling to Russia to attend college. It's your first time travelling overseas. ");
+
+              Console.WriteLine("You took the wristband and followed her to Cabin 13.  ");  
+
+              Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+              Console.WriteLine("It is currently 10:37. ");  
+
+              Console.ForegroundColor = ConsoleColor.White; 
+
+              Console.WriteLine("You found that there is a piece of paper on your bed, you decide to ");  
+
+              Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+              Console.WriteLine("Op: Pick it up (1) / Ignore it (2) ");  
+
+              Console.WriteLine("//Insert digit 1 or 2 ");  
+
+              return main.options(new Scene201(), new Scene202(), null);
+            }
+}
+public class Scene0 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Environment.Exit(0);
+  return null;
+  }
+}
+public class Scene201 : IScene {
+  public IScene scene_contents() {
+
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You picked up the paper. The note reads: ");  
+
+    Console.WriteLine("Dear Player: ");  
+
+    Console.ForegroundColor = ConsoleColor.Blue; 
+
+    Console.WriteLine("  1. Please remember the following rules, try not to disobey them ");  
+
+    Console.WriteLine("  2. Do not eat products that contains flour ");  
+
+    Console.WriteLine("  3. Do not use free Wi-Fi  ");  
+
+    Console.WriteLine("  4. Be careful of what you say, try your best to not cause problems ");  
+
+    Console.WriteLine("  5. THE OCEAN IS BLACK!!!  ");  
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You are confused. You looked outside and saw the blue ocean.");  
+
+    Console.ForegroundColor = ConsoleColor.Red; 
+
+    Console.WriteLine(" [This is ridiculous.] ");  
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You thought.");  
+
+    Console.WriteLine("You decide to");  
+
+    Console.ForegroundColor= ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Op: Show paper to Kea (1) / Keep paper to yourself (2) ");  
+    return main.options(new Scene203(), new Scene204(), null);
+
+    }
+  }
+public class Scene202 : IScene {
+    public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You stuffed the paper into the garbage can. "); 
+
+    Console.ForegroundColor = ConsoleColor.Red; 
+
+    Console.WriteLine("[Uh! Does the staffs here not clean up this room?]");  
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You decide to do something until lunch time begins."); 
+
+    Console.WriteLine("You decide to");  
+
+    Console.ForegroundColor= ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Op: Be on your phone (1) / Go for a walk around the ship (2) / Go to the cafeteria to get some food (3) ");  
+
+    Console.WriteLine("//Insert digit 1, 2, or 3");  
+    return main.options(new Scene205(), new Scene207(), new Scene206());
+    }
+  }
+public class Scene203 : IScene {
+  public IScene scene_contents() {
+    main.Kea ++;
+  Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("Kea read the note and laughed."); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("'Haha, don't tell me you believe in this paper and the announcement, it's just a prank or something, don't let it get into you, " + main.username + ". I'm hungry, I want to go to the cafeteria for some food, do you wanna come with me?' "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You decide to"); 
+
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Op: Be on your phone (1) / Go for a walk around the ship (2) / Go to the cafeteria to get some food (3) "); 
+
+    Console.WriteLine("//Insert digit 1, 2, or 3");  
+  return main.options(new Scene205(), new Scene207(), new Scene206());
+  }
+}
+public class Scene204 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You stuffed the paper into your pocket. Kea dropped herself on her bed. She groaned,"); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("'I'm so hungry and tired from the long day, we can either go to the cafeteria together, or you can enjoy your own space while I take a nap. Does that sound good? "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You decide to  "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Op: Be on your phone (1) / Go for a walk around the ship (2) / Go to the cafeteria to get some food (3) "); 
+
+    Console.WriteLine("//Insert digit 1, 2, or 3"); 
+  return main.options(new Scene205(), new Scene207(), new Scene206());
+  }
+}
+public class Scene205 : IScene {
+  public IScene scene_contents() {
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.Clear();
+
+    Console.WriteLine("You lay down on the bed and opened your phone. A pop-up screen showed up on your phone to buy Wi-fi. It was a large amount of money for Wi-Fi, and this amount is not planned on your budget. But then an unlocked Wi-Fi also showed up on your phone. "); 
+
+    Console.WriteLine("You decide to  "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Op: Do something else (1) / Connect to free Wifi (2) "); 
+  return main.options(new Scene209(), new Scene208(), null);
+  }
+}
+public class Scene206 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You walked with Kea to the Cafeteria. There were already people sitting down and eating.  "); 
+
+    Console.WriteLine("There were all sorts of seafood on the table, everyone there was grabbing right from the plates.  "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("'Are these all free?'"); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("Kea asked one of the waitresses wearing blue. "); 
+
+    Console.WriteLine("Surprisingly, the waitress nodded, eyes staring at you uncomfortably. "); 
+
+    Console.WriteLine("You started to feel uneasy. "); 
+
+    Console.WriteLine("You decide to  "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Op: Sit down and eat (1) / Leave the Cafeteria (2) "); 
+  return main.options(new Scene301(), new Scene3(), null);
+  }
+}
+public class Scene207 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You stood up and opened the door. "); 
+
+    Console.ForegroundColor = ConsoleColor.Green; 
+
+    Console.WriteLine("'I'm going for a walk.'"); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("Kea didn't reply. You walked out upstairs to the hall.  "); 
+
+    Console.WriteLine("Someone bumped into you, his eyes hollowed for a second. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("'Sorry Miss.'"); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("He was a crewmate, or a staff. He was wearing a blue uniform. "); 
+
+    Console.WriteLine("You decided to ignore him. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("'Hey, miss!' "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("He stopped you. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("'Sorry for bothering, but a passenger lost his wristband, and he is stuck outside of his cabin. We're worried that someone took his wristband by accident. Is it okay if I check your wristband?' "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You decide to  "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Op: Hand the wristband to him (1) / Reject him (2) "); 
+  return main.options(new Scene303(), new Scene302(), null);
+  }
+}
+public class Scene208 : IScene {
+  public IScene scene_contents() {
+    main.Clown ++;
+    Console.Clear();
+    Console.WriteLine("You pressed the Wi-Fi icon. Unexpectedly, the connection was successful. "); 
+
+    Console.ForegroundColor = ConsoleColor.Red; 
+
+    Console.WriteLine("[There IS free Wi-Fi. The announcement is just some kind of prank I guess...] ");  
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("Suddenly another pop-up page showed up on your screen.  "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkRed; 
+
+    Console.WriteLine("*Connected... You are registered. ");  
+
+      Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You are confused. You exited the screen and started to text your family. The messages didn't send."); 
+
+    Console.ForegroundColor = ConsoleColor.Red; 
+
+    Console.WriteLine("[That's weird. There must be no signal here.] ");  
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine(". . . "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+    Console.WriteLine("It's currently 11:52 am. ");  
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("After spending some time on your phone, you decide to  "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Op: Go to cafeteria for lunch (1) / Stay in cabin (2) "); 
+  return main.options(new Scene307(), new Scene308(), null);
+  }
+}
+public class Scene209 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You didn't want to spend money on entertainment. But there's still over an hour until Cafeteria opens. "); 
+
+    Console.WriteLine("You decide to  "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Op: take a nap (1) / Go for a walk around the ship (2) / Go to the cafeteria to get some food (3) "); 
+  return main.options(new Scene304(), new Scene207(), new Scene206());
+  }
+}
+public class Scene3 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You stood up. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.Write("'Wait where are you going?' "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine(" Kea asked."); 
+
+    Console.ForegroundColor = ConsoleColor.Green; 
+
+    Console.WriteLine("'I'm feeling tired, I think it'll be better if I go back to the cabin for some rest.'"); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.Write("Kea shrugged her shoulders. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("'Well, I'm not going with you. Free food is not often.' "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You walked towards the exit. "); 
+
+    Console.WriteLine("The waitress stopped you."); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("'Miss, you can only come here once per day for lunch, if you leave right now, you'll have to wait until dinner time.' "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You decide to  "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Op: Still leave (1) / Stay for lunch (2) "); 
+  return main.options(new Scene305(), new Scene301(), null);
+  }
+}
+public class Scene301 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You started to eat.   "); 
+
+    Console.WriteLine("The food tasted interesting, it's weirdly greasy with a tint of sweetness, but the smell made the dish much appetizing. "); 
+
+    Console.WriteLine("You ignored the weird taste and convinced yourself that the seafood in this area of ocean tastes different than the ones you've eaten before. "); 
+
+    Console.WriteLine("You finished your meal. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+    Console.WriteLine("It is currently 11:16 am.");  
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("Some people started to leave the cafeteria, while others stayed. You and Kea stood up to leave.  "); 
+
+    Console.WriteLine("Suddenly a scream shrilled up your spines.  "); 
+
+    Console.WriteLine("You turned around and saw Kea being ripped apart by the waitress that doesn't look human anymore.  "); 
+
+    Console.WriteLine("A bright shade of red filled your sight. Pain screeched through your head. "); 
+
+    Console.WriteLine(". . ."); 
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Press any key to continue..."); 
+    Console.ReadLine();
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+    Console.WriteLine("You are slayed by "); 
+
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+
+    Console.WriteLine(" [Waitress] "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+    Console.WriteLine("You have won title "); 
+
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+
+    Console.WriteLine(" [Meat Lover] "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("* * *"); 
+     Console.WriteLine("Op: Retry (1) / Exit (2)"); 
+    return main.options(new Scene1(), new Scene0(), null);
+  }
+}
+public class Scene302 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.Green; 
+
+    Console.WriteLine("'Sorry, I'm in a hurry,' "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("you said warily and stepped away from the crewmate. "); 
+
+    Console.WriteLine("With no alarm, he suddenly sprang up from the ground, his arm flying towards your neck.  "); 
+
+    Console.WriteLine("Your pupils narrowed, out of instinct, you ducked. His body flew over you and landed flat on the ground. "); 
+
+    Console.WriteLine("You saw in horror that his body drained away onto the floor, leaving his uniform lying where he landed.  "); 
+
+    Console.WriteLine("A shadow of dark red soaked the blue uniform into black. "); 
+
+    Console.WriteLine("You went silent as the fright shilled through your veins.  "); 
+
+    Console.WriteLine("You ran back to the cabin. "); 
+
+    Console.WriteLine(". . . "); 
+
+    if (main.Kea == 1)
+    {
+      Console.WriteLine("Kea is still sound asleep, you tried to wake her up, but she didn't move, still heavily asleep."); 
+    }
+    else
+    {
+      Console.WriteLine("Kea hasn't come back.  "); 
+    }
+
+    Console.WriteLine("The horrific image is still playing again and again in your head.  "); 
+
+    Console.WriteLine("You had to do something to calm yourself down. "); 
+
+    Console.WriteLine("You decide to  "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Op: Stay awake (1) / try to go to sleep (2) ");
+
+  return main.options(new Scene401(), new Scene306(), null);
+  }
+}
+public class Scene303 : IScene {
+  public IScene scene_contents() {
+    main.Crew++; 
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You gave your wristband to him nervously, afraid that he might not give it back. "); 
+
+    Console.WriteLine("He took it and grinned. You saw him opening the back of the wrist band, glanced inside, and closing it back on. "); 
+
+    Console.WriteLine("You relaxed when he gave the wristband back.  "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.Write("'Thank you miss. It's not the one.'"); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine( " His grin was so wide it was unavoidable. "); 
+
+    Console.WriteLine("You nodded to him uncertainly. He nodded back and jogged away as if he was in a hurry. "); 
+
+    Console.ForegroundColor = ConsoleColor.Red; 
+
+    Console.WriteLine("[This is mad. Everything today is so un-normal. The announcement, the paper, my roommate, and this random guy. This must be a dream.] ");  
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine( "You walked around the ship. There were few people around. You passed the cafeteria and heard some screeching noises and a really nice smell.  "); 
+
+    Console.WriteLine( "But you felt a bit seasick, so you decided to go back to the cabin for some rest.  "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+    Console.WriteLine("It is currently 11:57 am.");  
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine(". . ."); 
+
+    Console.WriteLine("You opened the cabin door and suddenly felt very tired."); 
+
+    Console.WriteLine("You decide to  "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Op: try to go to sleep (1) / stay awake (2) "); 
+
+  return main.options(new Scene306(), new Scene401(), null);
+  }
+}
+public class Scene304 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You lay down on your cabin bed and fell asleep. "); 
+
+    Console.WriteLine("You had never fallen asleep this fast before, but it might because of the stressful day, your mind shut off right when your head touched the pillow.  "); 
+
+    Console.WriteLine("But the sleep wasn't peaceful. Your body tells you that there's someone, or something watching you, but your eyes wouldn't open, and your body is frozen as though you cannot control it anymore. "); 
+
+    Console.WriteLine("In long and endless fear, you suddenly start to feel unable to breathe. You tried to open your mouth for air, but no matter how hard you tried, your mouth was glued shut."); 
+
+    Console.WriteLine("Your mind started to go blank. "); 
+
+    Console.ForegroundColor = ConsoleColor.Red; 
+
+    Console.WriteLine("[This might be the longest sleep I'll ever have.] ");  
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine(". . . "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Press any key to continue...");  
+    Console.ReadLine();
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+    Console.WriteLine("You are slayed by "); 
+
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+
+    Console.WriteLine(" [Darkness] "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+    Console.WriteLine("You have won title "); 
+
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+
+    Console.WriteLine(" [Sleeping Beauty] "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("* * *"); 
+     Console.WriteLine("Op: Retry (1) / Exit (2)");
+  return main.options(new Scene1(), new Scene0(), null);
+  }
+}
+public class Scene305 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You were determined to leave. You stepped out of the cafeteria and walked straight towards the cabin. An uneasy feeling filled your body. "); 
+
+    Console.WriteLine("For no exact reason, you start to regret coming to the cafeteria. "); 
+
+    Console.WriteLine("You were unable to control your body. "); 
+
+    Console.WriteLine("You walked towards the back kitchen with stiff limbs, your mouth tightly shut.  "); 
+
+    Console.WriteLine("With trembling hands, you opened the kitchen door. "); 
+
+    Console.WriteLine("A gush of sharp odor of rotting meat filled your brain. ");  
+
+    Console.WriteLine("   "); 
+
+    Console.WriteLine(". . . "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Press any key to continue...");  
+    Console.ReadLine();
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+    Console.WriteLine("You are slayed by "); 
+
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+
+    Console.WriteLine(" [Cook] "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+    Console.WriteLine("You have won title "); 
+
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+
+    Console.WriteLine(" [Appetizer] "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("* * *"); 
+     Console.WriteLine("Op: Retry (1) / Exit (2)");
+  return main.options(new Scene1(), new Scene0(), null);
+  }
+}
+public class Scene306 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You lay down on your cabin bed, but the image of the melting man didn't disappear. "); 
+
+    Console.ForegroundColor = ConsoleColor.Red; 
+    Console.WriteLine("[What is this place...This must be not real...not...I want to leave... I want to go home...this must be a dream... just wake up " + main.username + ", wake up...] "); 
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You tried to comfort yourself, but as you try, you slowly got tired, and you feel asleep. "); 
+
+    Console.WriteLine("You had never fallen asleep this fast before, it might be because of the stressful day, your mind shut off right when your head touched the pillow.  "); 
+
+    Console.WriteLine("But the sleep wasn't peaceful. Your body tells you that there's someone, or something watching you, but your eyes wouldn't open, and your body is frozen as though you cannot control it anymore. "); 
+
+    Console.WriteLine("In long and endless fear, you suddenly start to feel unable to breathe. You tried to open your mouth for air, but no matter how hard you tried, your mouth was glued shut."); 
+
+    Console.WriteLine("Your mind started to go blank. "); 
+
+    Console.ForegroundColor = ConsoleColor.Red; 
+
+    Console.WriteLine("[This might be the longest sleep I'll ever have.] ");  
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine(". . . "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Press any key to continue...");  
+    Console.ReadLine();
+    Console.Clear();
+
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+    Console.WriteLine("You are slayed by "); 
+
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+
+    Console.WriteLine(" [Darkness] "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+    Console.WriteLine("You have won title "); 
+
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+
+    Console.WriteLine(" [Sleeping Beauty] "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("* * *"); 
+
+     Console.WriteLine("Op: Retry (1) / Exit (2)");
+  return main.options(new Scene1(), new Scene0(), null);
+  }
+}
+public class Scene307 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You arrived at the cafeteria and sat down.  "); 
+
+    Console.WriteLine("As if the other passengers also noticed something creepy about this ship, the cafeteria was surprisingly quiet, only some murmuring was heard. "); 
+
+    if(main.Kea == 1)
+    {
+      Console.WriteLine("Kea seemed surprised by this scene, but out of fear, or the instinct of human beings, she also became quiet. "); 
+    }
+    Console.WriteLine("You went to the serving table, there were no servers or staff, just two old ladies holding soup spoons.  "); 
+
+    Console.WriteLine("The food was not fancy here, just the normal soup, the soup didn't look appetizing, with lettuce floating on the top, and the incredible smell before that came from the cafeteria is non-existent anymore. "); 
+
+    Console.WriteLine("There was also a bucket of spaghetti beside the soup. "); 
+
+    Console.WriteLine("One of the ladies gave you a bowl of soup and spaghetti. "); 
+
+    Console.WriteLine("The spaghetti looked very greasy and gross, with the sauce clumped in bits. "); 
+
+    Console.WriteLine("You decide to  "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Op: Eat the spaghetti anyways (1) / Just have the soup (2) "); 
+
+  return main.options(new Scene309(), new Scene4(), null);
+  }
+}
+public class Scene308 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You decided that the hunger isn't much, and you felt more comfortable staying in the cabin. "); 
+
+    if (main.Kea == 1)
+    {
+      Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.Write("'You sure you're not coming?' "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("Kea asked. "); 
+
+    Console.ForegroundColor = ConsoleColor.Green; 
+
+    Console.Write("'I'm not really hungry yet, I will go for food later in the day.' "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("Kea left the cabin. "); 
+
+    Console.WriteLine("But after a long while, Kea still hasn't come back. And hunger and boredness started to come over you. "); 
+    }
+    else
+    {
+      Console.WriteLine(" "); 
+
+      Console.WriteLine(". . ."); 
+
+      Console.WriteLine("But after a long while, hunger and boredness started to come over you. "); 
+    }
+
+    Console.WriteLine("You decide to leave the cabin. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+    Console.WriteLine("It is currently 01:49 pm.");  
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine(". . . "); 
+
+    Console.WriteLine("You soon found out that the cafeteria was closed with all the lights out.   "); 
+
+    Console.WriteLine("You were disappointed and frightened by the fact that you had not seen a living soul on the way here. "); 
+
+    Console.WriteLine("Then you remembered that there was a show provided on the ship at 2 pm on the deck."); 
+
+    Console.ForegroundColor = ConsoleColor.Red; 
+
+    Console.WriteLine("[The people must be at the show, that's why I haven't seen anyone out...] ");  
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You walked upstairs to the deck. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Press any key to continue... "); 
+
+    Console.ReadLine();
+
+  return new Scene4031();
+  }
+}
+public class Scene309 : IScene {
+  public IScene scene_contents() {
+    main.Worm ++;
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You stuffed the spaghetti into your mouth. Surprisingly it was amazingly good. "); 
+
+    Console.WriteLine("Right away you felt that the stress flew away from your brain, and your body was all light. "); 
+
+    Console.WriteLine("In comparison the soup was just average. It didn't taste horrible, but also not great. "); 
+    if (main.Kea == 1)
+    {
+
+    Console.Write("Kea took a big bite from the spaghetti."); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine(" 'Oo! It's so good this pasta!' "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("She was so famished by the taste that she forgot to keep her volume down. Many sights shot at your table. "); 
+
+    Console.WriteLine("A blast of murmurs went through the cafeteria, many people also shoved the spaghetti into their mouths. "); 
+    }
+
+    Console.WriteLine("A man with heavy glasses glanced at you as if he wanted to say something, but he swallowed the words and looked away with pity in his eyes. "); 
+
+    Console.WriteLine("You ignored his sights. ");  
+
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Press any key to continue... "); 
+    Console.ReadLine();
+    return new Scene403();
+  }
+}
+public class Scene4 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You drank the soup. It was a normal taste, like the ones in supermarkets. "); 
+    if (main.Kea == 1)
+    {
+    Console.Write("But Kea took a big bite from the spaghetti."); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine(" 'Oo! It's so good this pasta!' "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("She was so famished by the taste that she forgot to keep her volume down. Many sights shot at your table. "); 
+
+    Console.WriteLine("A blast of murmurs went through the cafeteria, many people also shoved the spaghetti into their mouths. "); 
+    }
+
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Press any key to continue... "); 
+    Console.ReadLine();
+    return new Scene403();
+  }
+}
+public class Scene401 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You spent the time reading magazines.  "); 
+    if (main.Crew == 1)
+    {
+      Console.WriteLine("The horrific image starts to blur out, and your mind goes to peace."); 
+    }
+    else
+    {
+      Console.WriteLine("But the image on the pack of papers was all blurred out in your brain. "); 
+    }
+
+    Console.WriteLine("You were stressed by the day, but with the many unusual things happening, your instinct told you to keep awake.  "); 
+
+    Console.WriteLine("You always believe in your instinct. "); 
+
+    Console.WriteLine(". . . "); 
+
+    Console.WriteLine("The time has turned to 11:57. "); 
+
+    Console.WriteLine("Hunger starts to invade. "); 
+
+    Console.WriteLine(". . . "); 
+    if (main.Kea == 1)
+    {
+      Console.WriteLine("You woke Kea up; this time she was unexpectedly easy to be awake. "); 
+
+      Console.WriteLine("You walked together to the cafeteria. "); 
+    }
+    else
+    {
+      Console.WriteLine("You stood up and walked out of the cabin, you nervously walked towards the cafeteria. ");
+    }
+
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Press any key to continue... "); 
+
+    Console.ReadLine();
+
+    return new Scene307();
+  }
+}
+public class Scene402: IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+    Console.WriteLine("The time is currently 1:52  "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("After spending the time walking around the ship seeing views with other passengers, you became more relaxed, and your mood finally brightened up. "); 
+
+    Console.WriteLine("But you heard from other passengers that there's been people vanishing in these past few hours, and people suggested to go to the deck to see if there's really a performance of some sort. "); 
+
+    if (main.Crew == 1)
+    {
+      Console.WriteLine("You didn't tell anyone what you had seen earlier, and you knew that the performance would not be a safe place to go to."); 
+      Console.WriteLine("But people are starting to walk towards the deck."); 
+    }
+    else
+    {
+      Console.WriteLine("You were really curious about the performance everyone was talking about. You had nothing else better to do this evening anyways."); 
+    }
+
+    Console.WriteLine("You decide to  "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Op: Go to the performance (1) / Go back to cabin (2) "); 
+
+    return main.options(new Scene403(), new Scene406(), null);
+  }
+}
+public class Scene4031: IScene { 
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You walked up to the deck.  "); 
+
+    Console.WriteLine("There were rows of seats planted on the deck, facing towards a wooden stage in the very front of the deck. The whole place was surrounded by the dark blue ocean. "); 
+
+    Console.WriteLine("There is nothing on the ocean, even the waves seemed unusually small.  "); 
+
+    Console.WriteLine("You soon realized what seemed wrong about this place, the water is too thick and heavy. It's as if the water was made of blue glue.  "); 
+
+    Console.WriteLine("Soon everyone that came was seated. You sat near the middle of the audience. Not every seat was filled, and the front row nearest to the stage was almost empty.  "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+    Console.WriteLine("It is currently 2:00 pm. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Press any key to continue... "); 
+    Console.ReadLine();
+    return new Scene403();
+    }
+  }
+public class Scene403: IScene { //4.3
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You and the other people walked up to the deck.  "); 
+
+    Console.WriteLine("There were rows of seats planted on the deck, facing towards a wooden stage in the very front of the deck. The whole place was surrounded by the dark blue ocean. "); 
+
+    Console.WriteLine("There is nothing on the ocean, even the waves seemed unusually small.  "); 
+
+    Console.WriteLine("You soon realized what seemed wrong about this place, the water is too thick and heavy. It's as if the water was made of blue glue.  "); 
+
+    Console.WriteLine("Soon everyone that came was seated. You sat near the middle of the audience. Not every seat was filled, and the front row nearest to the stage was almost empty.  "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+    Console.WriteLine("It is currently 2:00 pm. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Press any key to continue... ");
+
+    Console.ReadLine();
+
+    if (main.Clown == 1)
+    {
+      return new Scene404();
+    }
+    else
+    {
+      return new Scene405();
+    }
+  }
+}
+public class Scene404 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("A loud bell rang, and clinking noise shook the whole deck.  "); 
+
+    Console.WriteLine("A man wearing a blue vest and poofy sleeves rose up from the middle of the stage.  "); 
+
+    Console.WriteLine("He had painted his face into some kind of joker face -- white skin, two red circles on his cheek, thick eyeliners and a grin that lid up all the way to his ears. His hair was greasy white, it stuck to his skull as if someone poured a bucket of water over him. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.Write("'I always love this grand entrance, hello – my dear playmates~, welcome to the show tonight!' "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("His grin wasn't drawn, the cut on his cheek opened and closed.  "); 
+
+    Console.WriteLine("The audience replied with silence, only a few tiny gasps and whimpers were heard. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.Write("'Awwwww no applause? This is disappointing.'"); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("His head drooped down for a moment, then it rose up again."); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("'Well, it's always like this every year, I guess I can't get my hopes up... But I am a very caring man and I'm known for my kindness and forgiveness, hehe~' "); 
+
+    Console.Write("'I will forgive you for your disrespect, and still give you the chance to demonstrate with my magic show~ Ummm lets see... Who volunteers?' "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("The joker expressed his words with exaggerated body motion. "); 
+
+    Console.WriteLine("The audience remained silent. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.Write("'An audience that doesn't cooperate with the performer isn't a good audience... But luckily for you, we got people who registered to participate beforehand!' "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine(" His eyes opened wide with excitement.  "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("'Let's welcome... Ashley Watson!'"); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("Some rusty music sang, and a flash of dark red light from above shined on a girl's head.  "); 
+
+    Console.WriteLine("She looked around 20, with bronze hair and a pretty face. Her face turned pale as the light stopped above her, and her whole body trembled on the seat. "); 
+
+    Console.WriteLine("Shaking, she stood up and ran towards the stairs. "); 
+
+    Console.WriteLine("The joker melted on the stage and appeared right in the way she was running towards.  "); 
+
+    Console.WriteLine("He grabbed her arms and pulled her towards the stage. "); 
+
+    Console.WriteLine("She screamed and cried as he stuffed her into a black cabinet. There is a hole in the top of the cabinet. Her head was outside the cabinet while her body was inside."); 
+
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Press any key to continue... "); 
+
+    Console.ReadLine();
+    Console.Clear();
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("The joker placed a black box over her head, then he pulled out a long, medal blade from the ground. "); 
+
+    Console.WriteLine("He started to spin the box, and aimed the blade at the spinning box where the girl's head is in. "); 
+
+    Console.WriteLine("Everyone in the audience held their breath, and some closed their eyes. "); 
+
+    Console.WriteLine("Without hesitation the blade was stabbed into the box, and the other side came out from the other side."); 
+
+    Console.WriteLine("The spinning box was forced to a stop. "); 
+
+    Console.WriteLine("Silent. "); 
+
+    Console.WriteLine("The joker, with his lips widened to his cheekbones, pulled the blade back out and threw it to the ground, then he gracefully held the black box off the girl's head, and opened the cabinet. "); 
+
+    Console.WriteLine("The girl, trembling, was standing there, unwounded. "); 
+
+    Console.WriteLine("The audience is still silent. You were frozen by the tense atmosphere. "); 
+
+    Console.Write("The joker looked around, looking proud. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("'Well, where's the applause?' "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("The only noise heard was the girl's whimpers. "); 
+
+    Console.WriteLine("He suddenly seemed mad by the audience's reaction. He grabbed the blade from the ground and sliced through the girl's head. "); 
+
+    Console.WriteLine("Red and white splashed over the stage. "); 
+
+    Console.WriteLine("Screams rang the deck, and people started to run towards the exit. "); 
+
+    Console.WriteLine("You decide to "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Op: Run away (1) / Stay (2) "); 
+
+    return main.options(new Scene407(), new Scene408(), null);
+  }
+}
+public class Scene405 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("A loud bell rang, and clinking noise shook the whole deck.  "); 
+
+    Console.WriteLine("A man wearing a blue vest and poofy sleeves rose up from the middle of the stage.  "); 
+
+    Console.WriteLine("He had painted his face into some kind of joker face -- white skin, two red circles on his cheek, thick eyeliners and a grin that lid up all the way to his ears. His hair was greasy white, it stuck to his skull as if someone poured a bucket of water over him. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.Write("'I always love this grand entrance, hello – my dear playmates~, welcome to the show tonight!' "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("His grin wasn't drawn, the cut on his cheek opened and closed.  "); 
+
+    Console.WriteLine("The audience replied with silence, only a few tiny gasps and whimpers were heard. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.Write("'Awwwww no applause? This is disappointing.'"); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("His head drooped down for a moment, then it rose up again."); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("'Well, it's always like this every year, I guess I can't get my hopes up... But I am a very caring man and I'm known for my kindness and forgiveness, hehe~' "); 
+
+    Console.Write("'I will forgive you for your disrespect, and still give you the chance to demonstrate with my magic show~ Ummm lets see... Who volunteers?' "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("The joker expressed his words with exaggerated body motion. "); 
+
+    Console.WriteLine("The audience remained silent. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.Write("'An audience that doesn't cooperate with the performer isn't a good audience... But luckily for you, we got people who registered to participate beforehand!' "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine(" His eyes opened wide with excitement.  "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Press any key to continue. . .");
+    Console.ReadLine();
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("Some rusty music sang, and a flash of dark red light from above shined on your head.   "); 
+    Console.WriteLine("You were terrified, your heart nearly stopped beating. "); 
+    Console.WriteLine("You felt your blood run cold and your limbs stiffened. "); 
+    Console.WriteLine("You stood up and ran towards the exit with all your strength, regretting sitting in the middle but not the very back row. "); 
+    Console.WriteLine("You bumped into someone’s chest; the Joker somehow was standing right in front of you with his cracked smile. "); 
+    Console.WriteLine("You screamed as he held you by your arms and pulled you towards the stage. "); 
+    Console.WriteLine("He stuffed you into a black cabinet. There is a hole in the top of the cabinet. "); 
+    Console.WriteLine("Your head was out through the hole facing the audience while your body was in the cabinet. "); 
+
+    Console.WriteLine("The joker placed a black box over your head, then he pulled out a long, medal blade from the ground. "); 
+
+    Console.WriteLine("He started to spin the box fast and aimed the blade at the spinning box at your head. "); 
+
+    Console.WriteLine("You were all dizzy and scared, you felt like you were going to vomit. "); 
+
+    Console.WriteLine("It was some exhausting seconds of silence. "); 
+
+    Console.WriteLine("Suddenly, you heard a blade stabbing through something, but you felt no pain, just a huge force that stopped the cabinet. "); 
+
+    Console.WriteLine("Silent. "); 
+
+    Console.WriteLine("Then you saw light again as the joker gracefully removed the black box from your head. "); 
+
+    Console.WriteLine("You can feel the sweat going down your cheeks "); 
+
+    Console.WriteLine("The audience is still silent.  "); 
+
+    Console.Write("The joker looked around, looking proud. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("'Well, where's the applause?' "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("The only noise heard was your whimpers. "); 
+
+    Console.WriteLine("He suddenly seemed mad by the audience's reaction."); 
+
+    Console.WriteLine("He bent down his body and re-grabbed the blade. "); 
+
+    Console.WriteLine("The blade shimmered in front of your eyes, and the last thing you saw was the joker’s feet. "); 
+
+    Console.WriteLine("There was mold on the shoes. "); 
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Press any key to continue. . .");
+    Console.ReadLine();
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+    Console.WriteLine("You are slayed by "); 
+
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+
+    Console.WriteLine(" [Joker] "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+    Console.WriteLine("You have won title "); 
+
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+
+    Console.WriteLine(" [Headless Nick] "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("* * *"); 
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+       Console.WriteLine("Op: Retry (1) / Exit (2)");
+    return main.options(new Scene1(), new Scene0(), null);
+  }
+}
+public class Scene406 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.WriteLine("Out of uneasy feelings of tension, you decided to go back to the cabin."); 
+
+    Console.WriteLine("People tried to convince you to come with them to the deck, but this only increased your suspicions, and you were more ensured with your decision. "); 
+
+    Console.WriteLine("Others saw your determination to leave and stopped trying to persuade you to come, instead they together walked to the deck."); 
+
+    Console.WriteLine("Only a few like you were walking the opposite direction."); 
+
+    Console.WriteLine(". . . "); 
+
+    Console.WriteLine("After you had arrived in your cabin and locked the door, you lay on your bed and tried to relax yourself."); 
+
+    Console.WriteLine("The sunlight shone through the small window."); 
+
+    Console.WriteLine("Your mind started to wander off and you were getting sleepy, and that's when screaming rang."); 
+
+    Console.WriteLine("It came from the deck."); 
+
+    Console.ForegroundColor = ConsoleColor.Red; 
+
+    Console.Write("[Thank goodness I didn't go with these idiots]"); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You thought with relief and fear.  "); 
+
+    Console.WriteLine("But as you were imagining the scenes happening on the deck in your mind, you noticed the window suddenly got dark. "); 
+
+    Console.WriteLine("You looked back."); 
+
+    Console.WriteLine("A man wearing a black crewmate suit was staring at you through the window."); 
+
+    Console.WriteLine("Uncontrolled, you screamed with horror."); 
+
+    Console.WriteLine("The man seemed to enjoy the fear in your voice, he smirked as you try to pull open the locked cabin door."); 
+
+    Console.WriteLine("You finally pulled open the medal door, but desperately you found yourself falling into someone's arms."); 
+
+    Console.WriteLine("You looked up and saw the exact same man, wearing a blue crewmate suit, smiling at you through the door. "); 
+
+    Console.WriteLine("He held your neck in his palm, and you heard the loudest snapping noise in your life, it came from under your chin. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Press any key to continue... "); 
+
+    Console.ReadLine();
+    Console.Clear();
+
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+    Console.WriteLine("You are slayed by "); 
+
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+
+    Console.WriteLine(" [Crewmate] "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+    Console.WriteLine("You have won title "); 
+
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+
+    Console.WriteLine(" [Alone Wolf] "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("* * *"); 
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+     Console.WriteLine("Op: Retry (1) / Exit (2)");
+  return main.options(new Scene1(), new Scene0(), null);
+  }
+}
+public class Scene407 : IScene {
+  public IScene scene_contents() {
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You were terrified, and as you saw the girl beside you started to run towards the exit, you instantly followed her. ");  
+
+    Console.WriteLine("But then disaster happened. ");  
+
+    Console.WriteLine("Giant tentacles made of thick, dark water flew onto the deck and grabbed the many people running away. ");
+
+    Console.WriteLine("The people caught were instantly choked to death, and their corpses were taken with the water. ");
+
+    Console.Write("Some people screamed, ");
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("‘Get back onto the seats!’ ");
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You turned around and ran back. ");
+
+    Console.WriteLine("But it was too late, you felt water leaking into your lungs and you gasped for air. ");
+
+    Console.WriteLine("After an instinctive headache, you felt yourself floating away, leaving your body sinking into the black water. ");  
+
+    Console.ForegroundColor= ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Press any key to continue...");  
+
+    Console.ReadLine();
+    Console.Clear();
+
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+    Console.WriteLine("You are slayed by "); 
+
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+
+    Console.WriteLine(" [Ocean] "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+    Console.WriteLine("You have won title "); 
+
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+
+    Console.WriteLine(" [Human Jerkies] "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("* * *"); 
+     Console.WriteLine("Op: Retry (1) / Exit (2)");
+  return main.options(new Scene1(), new Scene0(), null);
+  }
+}
+public class Scene408 : IScene { //4.8-5.1
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You froze in your seat. ");  
+
+    Console.WriteLine("About half of the people started to run towards the exit. You were horrified but following your instinct, you decided to stay in your spot. ");  
+
+    Console.WriteLine("Instead, you looked up at the Joker on stage, who is now growling and acting like a little child having taken away his cotton candy. ");
+
+    Console.WriteLine("Only after a few breaths, disturbing gobbling noises came from behind you – where the people were running towards. ");
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.Write("‘Get back onto the seats!’ ");
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("Someone shouted beside you. ");
+
+    Console.WriteLine("You looked back and saw giant tentacles of water taking away bodies into the dark ocean. ");
+
+    Console.WriteLine("The girl who was once sitting next to you didn’t run far, after seeing the disaster ahead, she instantly turned around and sat back beside you. "); 
+
+    Console.WriteLine("A tentacle was just about to grab her, but the moment she sat down, the tentacle melted into a pile of water, which then very soon was gone completely. "); 
+
+    Console.WriteLine("Only a quarter of the people ran back, but the ones who didn’t survive, their bodies are gone now."); 
+    Console.WriteLine("The deck was clean and silent, as if nothing had happened.");
+
+    if(main.Kea ==1)
+    {
+    Console.WriteLine("You realized that Kea is gone as well.  "); 
+    }
+    Console.ForegroundColor= ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Press any key to continue...");  
+
+    Console.ReadLine();
+    Console.Clear();
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You looked back at the joker, he sighed very unhappily. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.Write("‘It was my fault; I should have told you stupid things to not run away while the performance is going... Well guess what! Now almost all of my registered participants are dead.’ "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("He stomped his feet, mad. "); 
+
+    Console.WriteLine("He then kicked the dead body out of the cabinet. The body dropped in front of the stage, causing people to whimper. "); 
+
+    Console.WriteLine("He then took out a stack of cards, it looked like normal playing cards. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.Write("‘Let’s welcome our alive participant, Miss Genevieve Leduc to help with this next magic show.’ "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine(" He seemed much less enthusiastic. "); 
+
+    Console.WriteLine("The girl who was sitting beside you shook at the sound of the name. As the beam of red light stopped on her, she sighed desparately and walked towards the stage.  "); 
+
+    Console.WriteLine("The joker smiled at her with excitement again, his eyes all narrowed.  "); 
+
+    Console.WriteLine("The joker first shoveled the deck of cards, and then placed the cards on the cabinet, faced down.  "); 
+
+    Console.Write("He then asked, "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("‘Are you nervous, my lady?’ "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.Write(" The girl squeaked; her voice all pinched and high, "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("‘Hell yeah I’m nervous.’ "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("The joker laughed; his laughter was like an old goose’s. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("‘Well then my dear, give me a name, anyone you know will be fine.’ ");
+
+    Console.Write("‘A name?’ ");
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.Write("Miss Leduc was confused, ");
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine(" ‘Bob.’"); 
+
+    Console.WriteLine("‘No no no, I mean a real person that you know’ "); 
+
+    Console.WriteLine("‘But I don’t know anyone here’ "); 
+
+    Console.Write("‘Then say your own name!’ "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("The joker suddenly got angry, and his voice rose. "); 
+
+    Console.WriteLine("The girl was frightened, at instinct she shouted back, "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("‘Claire Fischer!’");
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("Another girl in the audience gasped with horror. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("‘So, you do know someone little liar~ I’m guessing that’s your roommate?’ ");
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("She nodded with hesitation. Her sight shooting into the audience apologically.  ");
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("‘Now pick a card from here, and keep it to yourself~’ ");
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("She picked one up. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.Write("‘Now for the magic to happen!’ ");
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("The joker tapped the cabinet a few times, then he placed his fingertips on the opening of the cabinet. "); 
+
+    Console.WriteLine("Some red fluids started to leak through the gaps of the cabinet. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Press any key to continue... "); 
+
+    Console.ReadLine();
+    Console.Clear();
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You squinted your eyes; you were terrified of what might happen next. "); 
+
+    Console.WriteLine("The cabinet door banged open on the stage ground. "); 
+
+    Console.WriteLine("A human heart, still beating, rolled slowly out the cabinet and stopped halfway. "); 
+
+    Console.WriteLine("The girl on the stage widened her eyes with fright and uncertainty. "); 
+
+    Console.Write("Soon she realized something, she looked back into the audience,"); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine(" ‘No God Damn Claire!’  "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("Her roommate's head dropped down to her chest and redness stained her shirt. People beside her also noticed her conditions and yelped,"); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("‘She’s dead!’"); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.Write("More murmurs echoed the deck. You were terrified,"); 
+
+    Console.ForegroundColor = ConsoleColor.Red; 
+
+    Console.WriteLine("[How can anyone kill someone from this far?] "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.Write("The joker was satisfied with the reactions of the people. He shouted with excitement, ");  
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("‘Now Miss, show your card to the audience!’ "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("The girl was still traumatized with the fact that her roommate died, she jumped at the sound of the joker’s thrilled voice. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("‘Come on! Show it!’ "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("The girl with stiffened hands, turned the card facing the audience. "); 
+
+    Console.WriteLine("It was a Jack of Hearts, with a frowning two-sided girl drawn in the middle. ");
+
+    Console.WriteLine("The audience had some murmurs and some rigid claps. ");
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.Write("‘This is stupid! And Bloody as hell it is!’"); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine(" The girl whispered these words out shakely, she seems to suddenly lose her temper. "); 
+
+    Console.WriteLine("The Joker frowned. "); 
+    Console.WriteLine("The girl, realizing what she had just said, quickly shook her head, "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("‘NO! That's not what I mean, you're great! For real...");
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("The girl held a fake smile on her face. But her anger was non-disguisable."); 
+
+    Console.WriteLine("The Joker made his dead geese laugh again turned his head back towards the audience."); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("‘I am so happy you enjoyed my show~ Now please Miss, go back to your seat and I’m going to have some final words~.’  ");
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("The girl took a quick breath and jumped off the stage, looking cautiously back at the joker. ");
+
+    Console.WriteLine("Not noticing her steps, she landed on the corpse of the first victim, making a squished sound. ");
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine(". . . "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.Write("‘I hope you all enjoyed the show today, but because of some inconveniences, we are going to end this show sooner than usual, but I can't blame it on you. . . You can exit through the exit behind you, and remember to bring everything with you, I wish you all to have a lovely afternoon, and I hope that you will forever have a smile on your cute little lively faces!’ ");
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine(". . . "); 
+    Console.WriteLine("No one moved, they're all scared of leaving, considering of what had happened last time they tried."); 
+    Console.WriteLine(". . . "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("‘Yes, you may all leave, unless you want to stay here with me.’ ");
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("After some long seconds, someone ran towards the exit. People followed after, many with trembling legs. "); 
+
+    Console.WriteLine("You walked with them, and as soon as the surviving people arrived in the hallway by the cafeteria, people started to exclaim their fear and started to talk about ways to leave. "); 
+
+    Console.WriteLine("You joined the conversations. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Press any key to continue... "); 
+
+    Console.ReadLine();
+    Console.Clear();
+
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+    Console.WriteLine("It’s currently 3:47 ");  
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("After finding out that the people that didn’t come to the performance all disappeared and realizing that the crewmates and workers are most likely not human, people started to discuss how to survive these remaining hours. ");  
+
+    Console.WriteLine("Quickly people listed out the rules that were broadcasting and many decided to stay in groups of three at night. ");
+
+    Console.WriteLine("You agreed with this solution, and quickly made groups with two other girls. One was the girl that was the second participant of the show earlier, Ms. Leduc, and another was a girl with lots of freckles on her face, she told you her name was Molly. ");
+
+    Console.WriteLine("But a man with thick glasses opposed to this idea aggressively. ");
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("‘How do you know if the people you’re with are also human? We’ve never even met each other before; I suggest staying by ourselves in our cabins and not make things worse.’ ");
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You decide to  "); 
+
+    Console.ForegroundColor= ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Op: Stay in groups (1) / Stay by yourself (2) ");  
+
+  return main.options(new Scene505(), new Scene504(), null);
+  }
+}
+public class Scene502 : IScene { //5.2-5.3
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("A loud bell rang, and clinking noise shook the whole deck.  "); 
+
+    Console.WriteLine("A man wearing a blue vest and poofy sleeves rose up from the middle of the stage.  "); 
+
+    Console.WriteLine("He had painted his face into some kind of joker face -- white skin, two red circles on his cheek, thick eyeliners and a grin that lid up all the way to his ears. His hair was greasy white, it stuck to his skull as if someone poured a bucket of water over him. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.Write("'I always love this grand entrance, hello – my dear playmates~, welcome to the show tonight!' "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("His grin wasn't drawn, the cut on his cheek opened and closed.  "); 
+
+    Console.WriteLine("The audience replied with silence, only a few tiny gasps and whimpers were heard. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.Write("'Awwwww no applause? This is disappointing.'"); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("His head drooped down for a moment, then it rose up again."); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("'Well, it's always like this every year, I guess I can't get my hopes up... But I am a very caring man and I'm known for my kindness and forgiveness, hehe~' "); 
+
+    Console.Write("'I will forgive you for your disrespect, and still give you the chance to demonstrate with my magic show~ Ummm lets see... Who volunteers?' "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("The joker expressed his words with exaggerated body motion. "); 
+
+    Console.WriteLine("The audience remained silent. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.Write("'An audience that doesn't cooperate with the performer isn't a good audience... But luckily for you, we got people who registered to participate beforehand!' "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine(" His eyes opened wide with excitement.  "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+    Console.WriteLine("‘Let’s welcome..." + main.username + "!’  ");
+
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Press any key to continue. . .");
+
+    Console.ReadLine();
+    Console.Clear();
+
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("Some rusty music sang, and a flash of dark red light from above shined on your head.   "); 
+    Console.WriteLine("You were terrified, your heart nearly stopped beating. "); 
+    Console.WriteLine("You felt your blood run cold and your limbs stiffened. "); 
+    Console.WriteLine("You stood up and ran towards the exit with all your strength, regretting sitting in the middle but not the very back row. "); 
+    Console.WriteLine("You bumped into someone’s chest; the Joker somehow was standing right in front of you with his cracked smile. "); 
+    Console.WriteLine("You screamed as he held you by your arms and pulled you towards the stage. "); 
+    Console.WriteLine("He stuffed you into a black cabinet. There is a hole in the top of the cabinet. "); 
+    Console.WriteLine("Your head was out through the hole facing the audience while your body was in the cabinet. "); 
+
+    Console.WriteLine("The joker placed a black box over your head, then he pulled out a long, medal blade from the ground. "); 
+
+    Console.WriteLine("He started to spin the box fast and aimed the blade at the spinning box at your head. "); 
+
+    Console.WriteLine("You were all dizzy and scared, you felt like you were going to vomit. "); 
+
+    Console.WriteLine("It was some exhausting seconds of silence. "); 
+
+    Console.WriteLine("Suddenly, you heard a blade stabbing through something, but you felt no pain, just a huge force that stopped the cabinet. "); 
+
+    Console.WriteLine("Silent. "); 
+
+    Console.WriteLine("Then you saw light again as the joker gracefully removed the black box from your head. "); 
+
+    Console.WriteLine("You can feel the sweat going down your cheeks "); 
+
+    Console.WriteLine("The audience is still silent.  "); 
+
+    Console.Write("The joker looked around, looking proud. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.WriteLine("'Well, where's the applause?' "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("The only noise heard was your whimpers. "); 
+
+    Console.WriteLine("He suddenly seemed mad by the audience's reaction of silence."); 
+
+    Console.WriteLine("He bent down his body and re-grabbed the blade. "); 
+    Console.WriteLine("You had no time to react or to have anymore thoughts. "); 
+
+    Console.WriteLine("The blade shimmered in front of your eyes, and the last thing you saw was the joker’s feet. "); 
+
+    Console.WriteLine("There was mold on the shoes. "); 
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Press any key to continue. . .");
+
+    Console.ReadLine();
+    Console.Clear();
+
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+    Console.WriteLine("You are slayed by "); 
+
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+
+    Console.WriteLine(" [Joker] "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+    Console.WriteLine("You have won title "); 
+
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+
+    Console.WriteLine(" [Headless Nick] "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("* * *"); 
+  return main.options(new Scene1(), new Scene0(), null);
+  }
+}
+public class Scene504 : IScene { //5.4,5.6
+  public IScene scene_contents() {
+    Console.Clear();
+    main.Alone++;
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You were persuaded by the man’s words, and you decided to stay alone for the night instead.   ");  
+
+    Console.WriteLine("The other two girls weren’t convinced, but unfortunately, they weren’t able to find a third person, and Molly seemed very unsure about being in the same room with the girl that had just killed her ex-roommate. ");  
+
+    Console.WriteLine("As people kept talking about ways and rules to survive those last hours on board, the time had come to 5 pm. "); 
+    Console.WriteLine("People started to walk towards the cafeteria together, although most of them weren’t hungry because of disgust. "); 
+    Console.WriteLine(". . ."); 
+    Console.WriteLine("You arrived at the cafeteria.  "); 
+    Console.WriteLine("As if the cook was trying to make a joke, the dinner meal tonight was pasta with red sauce, and white cheese floats on top.  "); 
+    Console.WriteLine("The pasta is all clumped into blobs of red and whiteness, which unavoidably reminds people of the colors in front of the stage. "); 
+    Console.WriteLine("Instantly some retching noise echoed the cafeteria. "); 
+    Console.WriteLine("Almost no one went for the food, they all found a seat and sat there, trying to waste the time away until it was time to leave. None of the people decided to go back to their cabin yet.  "); 
+
+    Console.WriteLine("You were also grossed out by the food. "); 
+
+    Console.WriteLine(". . . "); 
+
+    Console.WriteLine("It was another 40 minutes of discussion. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+    Console.WriteLine("It is currently 5:45. "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("The two old ladies came with dishes of little cakes. "); 
+
+    Console.WriteLine("It looked fancy and appetizing. "); 
+
+    Console.WriteLine("Instantly some people went to grab a dish. "); 
+
+    Console.WriteLine("You knew from their looks of hunger that they were not there for lunch. "); 
+
+    Console.WriteLine("You soon realized that if you don’t eat something now, you will have to wait until the next morning, which is over 12 hours. "); 
+
+    Console.WriteLine("You decide to "); 
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Op: go for the cake (1) / remain sitting (2)  ");
+  return main.options(new Scene507(), new Scene508(), null); //wrong here.
+  }
+}
+public class Scene505 : IScene { //5.4,5.6
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You were not convinced by his words. ");  
+
+    Console.WriteLine("Molly sighed with relief at the look of you not being persuaded. "); 
+
+    Console.WriteLine("As people kept talking about ways and rules to survive those last hours on board, the time had come to 5 pm. "); 
+    Console.WriteLine("People started to walk towards the cafeteria together, although most of them weren’t hungry because of disgust. "); 
+    Console.WriteLine(". . ."); 
+    Console.WriteLine("You arrived at the cafeteria.  "); 
+    Console.WriteLine("As if the cook was trying to make a joke, the dinner meal tonight was pasta with red sauce, and white cheese floats on top.  "); 
+    Console.WriteLine("The pasta is all clumped into blobs of red and whiteness, which unavoidably reminds people of the colors in front of the stage. "); 
+    Console.WriteLine("Instantly some retching noise echoed the cafeteria. "); 
+    Console.WriteLine("Almost no one went for the food, they all found a seat and sat there, trying to waste the time away until it was time to leave. None of the people decided to go back to their cabin yet.  "); 
+
+    Console.WriteLine("You were also grossed out by the food. "); 
+
+    Console.WriteLine(". . . "); 
+
+    Console.WriteLine("It was another 40 minutes of discussion. "); 
+
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+    Console.WriteLine("It is currently 5:45. "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("The two old ladies came with dishes of little cakes. "); 
+
+    Console.WriteLine("It looked fancy and appetizing. "); 
+
+    Console.WriteLine("Instantly some people went to grab a dish. "); 
+
+    Console.WriteLine("You knew from their looks of hunger that they were not there for lunch. "); 
+
+    Console.WriteLine("You soon realized that if you don’t eat something now, you will have to wait until the next morning, which is over 12 hours. "); 
+
+    Console.WriteLine("You decide to "); 
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Op: go for the cake (1) / remain sitting (2)  ");
+  return main.options(new Scene507(), new Scene508(), null);
+  }
+}
+public class Scene507 : IScene { //5.7,5.9
+  public IScene scene_contents() {
+    main.Worm++;
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You had a big bite of the little cake covered with cream; sweetness filled your taste buds. ");  
+
+    Console.WriteLine("The cake was better than you thought it would be, your body felt light the moment you swallowed it.  "); 
+
+    if (main.Alone == 1)
+    {
+    Console.WriteLine("Your two new roommates didn’t grab a piece, as the atmosphere between them two is tense. ");  
+
+    Console.WriteLine("Molly seemed very uncomfortable with the fact that Vv had caused her previous roommate’s death. ");  
+
+    Console.WriteLine("And Vv is not happy with Molly’s skeptical attitudes. ");
+
+    Console.WriteLine("You didn’t want this mood to last for the entire night, so you tried to comfort them two.  ");
+
+    Console.WriteLine("Weirdly, they both seemed very obedient to you. ");
+    Console.WriteLine(". . .");
+    }
+    else
+    {
+      Console.WriteLine(". . .");
+    }
+
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+    Console.WriteLine("It is currently 6:55pm. ");  
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("People, in groups of three or one, walked together towards the cabins. "); 
+    if (main.Alone == 1)
+    {
+    Console.WriteLine("The three of you decided to stay at Molly’s cabin, as it was number 25, which was somewhere in the middle of the group of cabins. Being middle always seems the safest. "); 
+
+    Console.WriteLine("But as the door clicks open, the dead body of Molly’s previous roommate fell from the ceiling with a ‘Thump’. "); 
+
+    Console.WriteLine("The girl’s face is purple with her eyes popping open. "); 
+
+    Console.WriteLine("Molly screamed, and many other screams came from the other cabins. "); 
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.Write("‘No way am I going to stay here for the night with that thing!’ "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("Vv covered her nose with disgust. "); 
+    Console.WriteLine("After the fear had passed, Molly seemed upset to see the body. She glared at Vv with a disapproving look. "); 
+    Console.WriteLine("But she agreed that it isn’t a good idea to sleep where a person was killed. "); 
+    Console.WriteLine("The three of you then walked towards your cabin, cabin 13. "); 
+
+    }
+    else
+    {
+      Console.WriteLine("You also walked towards your cabin 13.  ");
+      Console.WriteLine("But on the way to your cabin, you saw a few passengers screaming when they opened the door. You looked and saw dead bodies falling from the ceiling.  ");
+      Console.ForegroundColor = ConsoleColor.Red; 
+      Console.WriteLine("[The monster here sure finds pleasure from scaring people]  ");
+      Console.ForegroundColor = ConsoleColor.White; 
+      Console.WriteLine("Although you were brainwashing yourself to not be scared by the ‘jokes’ of the monster, you were still tensed up as you began scanning your wristband.   ");
+      Console.WriteLine("You felt a bit remorse for staying alone. But you then convinced yourself that your action was correct.  ");
+      Console.ForegroundColor = ConsoleColor.Red; 
+      Console.WriteLine("[It would be scarier if the person I’m lying next to turn into a zombie]  ");
+    }
+    Console.ForegroundColor= ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Press any key to continue. . . ");  
+    Console.ReadLine();
+    if (main.Alone == 1)
+    {
+      return new Scene509();
+    }
+    else
+    {
+      return new Scene609();
+    }
+  }
+}
+public class Scene508 : IScene { //5.8,5.9
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("You stayed sitting as many others grabbed pieces. ");  
+    if (main.Alone == 1)
+    {
+    Console.WriteLine("Your two new roommates didn’t grab a piece, as the atmosphere between them two is tense. ");  
+
+    Console.WriteLine("Molly seemed very uncomfortable with the fact that Vv had caused her previous roommate’s death. ");  
+
+    Console.WriteLine("And Vv is not happy with Molly’s skeptical attitudes. ");
+
+    Console.WriteLine("You didn’t want this mood to last for the entire night, so you tried to comfort them two.  ");
+
+    Console.WriteLine("Weirdly, they both seemed very obedient to you. ");
+    Console.WriteLine(". . .");
+      }
+      else
+      {
+        Console.WriteLine(". . .");
+      }
+
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+
+    Console.WriteLine("It is currently 6:55pm. ");  
+
+    Console.ForegroundColor = ConsoleColor.White; 
+
+    Console.WriteLine("People, in groups of three or one, walked together towards the cabins. "); 
+
+    if (main.Alone == 1)
+    {
+    Console.WriteLine("The three of you decided to stay at Molly’s cabin, as it was number 25, which was somewhere in the middle of the group of cabins. Being middle always seems the safest. "); 
+
+    Console.WriteLine("But as the door clicks open, the dead body of Molly’s previous roommate fell from the ceiling with a ‘Thump’. "); 
+
+    Console.WriteLine("The girl’s face is purple with her eyes popping open. "); 
+
+    Console.WriteLine("Molly screamed, and many other screams came from the other cabins. "); 
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+
+    Console.Write("‘No way am I going to stay here for the night with that thing!’ "); 
+
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("Vv covered her nose with disgust. "); 
+    Console.WriteLine("After the fear had passed, Molly seemed upset to see the body. She glared at Vv with a disapproving look. "); 
+    Console.WriteLine("But she agreed that it isn’t a good idea to sleep where a person was killed. "); 
+    Console.WriteLine("The three of you then walked towards your cabin, cabin 13. "); 
+      }
+      else
+      {
+        Console.WriteLine("You also walked towards your cabin 13.  ");
+        Console.WriteLine("But on the way to your cabin, you saw a few passengers screaming when they opened the door. You looked and saw dead bodies falling from the ceiling.  ");
+        Console.ForegroundColor = ConsoleColor.Red; 
+        Console.WriteLine("[The monster here sure finds pleasure from scaring people]  ");
+        Console.ForegroundColor = ConsoleColor.White; 
+        Console.WriteLine("Although you were brainwashing yourself to not be scared by the ‘jokes’ of the monster, you were still tensed up as you began scanning your wristband.   ");
+        Console.WriteLine("You felt a bit remorse for staying alone. But you then convinced yourself that your action was correct.  ");
+        Console.ForegroundColor = ConsoleColor.Red; 
+        Console.WriteLine("[It would be scarier if the person I’m lying next to turn into a zombie]  ");
+      }
+    Console.ForegroundColor= ConsoleColor.DarkYellow; 
+
+    Console.WriteLine("Press any key to continue. . . ");  
+    Console.ReadLine();
+    if (main.Alone == 1)
+    {
+      return new Scene509();
+    }
+    else
+    {
+      return new Scene609();
+    }
+  }
+}
+public class Scene509 : IScene { //Connection scene
+  public IScene scene_contents() {
+    Console.Clear();
+    if (main.Worm > 1)
+    {
+      return new Scene6();//Worm
+    }
+    else
+    {
+      return new Scene603();//
+    }
+  }
+}
+public class Scene6 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("The night came.  "); 
+    Console.WriteLine("The three of you huddled up on the same bed, you tried hard to close your eyes. "); 
+    Console.WriteLine("The window curtains were open, a faint light of blue drifts in.  "); 
+    Console.WriteLine("The reason the curtains weren’t closed was because the people figured from the broadcasting rules in the morning that it was better to keep the curtains open. ");
+    Console.WriteLine("But you weren’t able to sleep, the fright today has been too much. Meanwhile, Molly and Vv were already looking asleep. "); 
+    Console.WriteLine("Then a gush of pain in your stomach forced you to widen your eyes. "); 
+    Console.WriteLine("And another gush, and another.  "); 
+    Console.WriteLine("You decided that the pain was not ignorable, but goodness the cabins came with washrooms, and it’s only a few steps away from the bed. ");
+    Console.WriteLine("You decide to  ");
+    Console.ForegroundColor= ConsoleColor.DarkYellow; 
+    Console.WriteLine("Op: Go to the washroom (1) / stay in bed (2) ");
+  return main.options(new Scene601(), new Scene602(), null);
+  }
+}
+public class Scene601 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("You pushed yourself up from the bed and walked towards the washroom. "); 
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+    Console.WriteLine("‘Where are you going to?’  "); 
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("A voice made you jump a little, you realized that it was Molly speaking. "); 
+    Console.ForegroundColor = ConsoleColor.Green; 
+    Console.WriteLine("‘Wash... washroom.’ ");
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("Your voice was trembling as you stumbled towards the washroom door, you could feel things rolling in your stomach. "); 
+    Console.WriteLine("You felt it going up your throat. You kneeled in front of the toilet and started vomiting.  "); 
+    Console.WriteLine("But it won’t stop. You looked down in the toilet and fear filled your head. You want to scream and call for help, but no sound came out except for guggling.  "); 
+    Console.WriteLine("There are white, lumpy worms that’s all about a few inches long, swimming in the toilet water, and more and more are coming out from your mouth. ");
+    Console.WriteLine("You heard footsteps and screams of Molly and Vv, but you weren’t able to respond, as you began to feel these slimy things pushing through your eyes, nose and ears. ");
+    Console.WriteLine("With a few popping noises, you suddenly lost four out of your five senses, only pain was felt, and your world was fainting into darkness. ");
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+    Console.WriteLine("Press any key to continue...");
+    Console.ReadLine();
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+    Console.WriteLine("You are slayed by "); 
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+    Console.WriteLine(" [Wheatworm]  "); 
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+    Console.WriteLine("You have won title "); 
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+    Console.WriteLine(" [Noodle Monster] "); 
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("* * *"); 
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+    Console.WriteLine("Op: Retry (1) / Exit (2)");
+    return main.options(new Scene1(), new Scene0(), null);
+  }
+}
+public class Scene602 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("You forced yourself to stay, but moans came from your mouth, and it instantly woke Molly and Vv up. "); 
+    Console.WriteLine("They sat up and asked if you were okay, but you were in too much pain to respond. "); 
+    Console.WriteLine("You felt things rolling in your stomach. "); 
+    Console.WriteLine("A huge desire to vomit drowned you, you turned your face towards the ground. ");
+    Console.WriteLine("Screams rang as you felt things coming out of your mouth. ");
+    Console.WriteLine("It was white, lumpy worms that’s all about a few inches long, all alive and jumping on the cabin floor, some landing on the bed, and more and more are coming out from your mouth. ");
+    Console.WriteLine("You want to scream and call for help, but no sound came out except for guggling. ");
+    Console.WriteLine("Even more desperately, you felt more of these slimy things pushing through your eyes, nose and ears. ");
+    Console.WriteLine("With a few popping noises, you suddenly lost four out of your five senses, only pain was felt, and your world was fainting into darkness. ");
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+    Console.WriteLine("Press any key to continue...");
+    Console.ReadLine();
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+    Console.WriteLine("You are slayed by "); 
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+    Console.WriteLine(" [Wheatworm]  "); 
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+    Console.WriteLine("You have won title "); 
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+    Console.WriteLine(" [Noodle Monster] "); 
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("* * *"); 
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+    Console.WriteLine("Op: Retry (1) / Exit (2)");
+    return main.options(new Scene1(), new Scene0(), null);
+  }
+}
+public class Scene603 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("The night came.        "); 
+    Console.WriteLine("The three of you huddled up on the same bed, you tried hard to close your eyes. "); 
+    Console.WriteLine("The window curtains were open, a faint light of blue drifts in.  "); 
+    Console.WriteLine("The reason the curtains weren’t closed was because people figured from the broadcasting rules in the morning that it was better to keep the curtains open.  ");
+    Console.WriteLine("But you weren’t able to sleep, the fright today has been too much. Meanwhile, Molly and Vv were already looking asleep. ");
+    Console.WriteLine("You forced yourself to close your eyes shut. ");
+    Console.ForegroundColor = ConsoleColor.DarkRed; 
+    Console.WriteLine("'Knock, knock.’ ");
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("Knocking sound came from the cabin door, and instantly you trembled and held your breath, and you felt Molly and Vv also holding their breaths. "); 
+    Console.WriteLine("The cabin went silent. ");
+    Console.WriteLine("Soon the knocking noises got louder and faster. And you heard the knocking person yelling for help. She sounds like Kea.  ");
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+    Console.Write("‘Is that your roommate?’");
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine(" Vv asked after seeing the looks on your face.");
+    Console.WriteLine("You nodded; that sounded exactly like her. ");
+    Console.WriteLine("Molly, seeing that you confirmed, she sat up and asked you if you wanted to open the door to let her in. ");
+    Console.WriteLine("You decide to ");
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+    Console.WriteLine("Op: Let her in (1) / Don’t (2) ");
+  return main.options(new Scene604(), new Scene605(), null);
+  }
+}
+public class Scene604 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("You decided to take the chance, you cannot leave a person to death if you were able to help. "); 
+    Console.WriteLine("Molly agreed with you, but Vv opposed. "); 
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+    Console.WriteLine("‘Remember the rules? No door-opening until 7!’ ");
+    Console.Write("‘That’s why we cannot leave a living human outside in the danger!’");
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine(" Molly argued and walked towards the door. ");
+    Console.WriteLine("The door clicked open. ");
+    Console.WriteLine("Thankfully, It was Kea, she seemed scared as she quickly ran in and shut the door behind her, breathing quickly.");
+    Console.WriteLine("Molly re-locked the door as you asked what Kea what had happened to her, you thought that she died hours ago. ");
+    Console.WriteLine("She calmed down her breath and took in a big gasp of air. ");
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+    Console.Write("‘It, it was f, fun, I just w...went for a swim.’");
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine(" She looked up right at you and let out a fake grin.");
+    Console.WriteLine("You were confused and about to ask something else, and then you noticed that her face was so pale that it looked green, and her skin was wrinkled and swollen.");
+    Console.WriteLine("Molly was the first to realize that Kea wasn’t quite normal, she flew into the washroom and locked the bathroom door from inside. ");
+    Console.WriteLine("Following the loud slam of the bathroom door, Kea jumped towards you, her mouth opening to the size of a basketball. ");
+    Console.WriteLine("You ducked just in time. Your instinct saved you again.");
+    Console.WriteLine("But Vv who was behind you wasn't lucky, she got her head bit off and crunched into pieces. ");
+    Console.WriteLine("You tried to open the cabin door, but the lock was stuck. You began smacking on the washroom door, Molly didn’t let you in. ");
+    Console.WriteLine("You screamed and swore as the monster grabbed you by the arms. ");
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+    Console.WriteLine("Press any Key to continue. . . ");
+    Console.ReadLine();
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+    Console.WriteLine("You are slayed by "); 
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+    Console.WriteLine(" [Kea]  "); 
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+    Console.WriteLine("You have won title "); 
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+    Console.WriteLine(" [Model Roommate] "); 
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("* * *"); 
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+    Console.WriteLine("Op: Retry (1) / Exit (2)");
+    return main.options(new Scene1(), new Scene0(), null);
+  }
+}
+public class Scene605 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("You decided not to let her in. ");
+    Console.ForegroundColor = ConsoleColor.Green; 
+    Console.Write("‘Who knows if it is her, it probably isn't. Kea’s dead.’ ");
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine(" You covered your ears and lay back in bed. ");
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+    Console.Write("‘So have you seen her corpse?’ ");
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("Molly asked with a tone you didn’t like. ");
+    Console.ForegroundColor = ConsoleColor.Green; 
+    Console.Write("‘No, but it doesn’t matter. She’s dead and that’s not her. Now we can ignore that and go back to sleep.’ ");
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("You hardened your voice. ");
+    Console.WriteLine("Vv nodded,");
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+    Console.WriteLine("‘Remember the rules, no door-opening ‘till 7.’ ");
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("Molly lay back down stiffly.  ");
+    Console.WriteLine("The knocking continued, and then following a painful scream, the knocking finally stopped. ");
+    Console.WriteLine("You covered your ears tighter and shivered a little, you can’t imagine how much hatred you would feel towards yourself if you saw Kea’s body outside the next morning. ");
+    Console.WriteLine("Molly whined; she seemed even more upset than you. She cried softly under the blankets. ");
+    Console.WriteLine("But you were in so much misery that you weren’t able to notice what she was doing.  ");
+    Console.Write("Another set of knocking came through with a man’s deep voice of, ");
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+    Console.WriteLine("‘Doing Room Checks, let me in please.’ ");
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("The three of you froze again. ");
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+    Console.WriteLine("‘I know that you are not asleep, let me in, please.’ ");
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("The hoarse voice echoed. ");
+    Console.WriteLine("This time no one went to the door. ");
+    Console.ForegroundColor = ConsoleColor.Red; 
+    Console.WriteLine("[This must be the monster that killed Kea, if that was Kea.] ");
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+    Console.WriteLine("Press any key to continue. . . ");
+    Console.ReadLine();
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("The knocking became smashing. ");
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+    Console.WriteLine("‘Just let me in! If you don’t you will be killed tomorrow!!’ ");
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.Write("Molly looked scared, she wiped the tears off her face and whispered,");
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+    Console.WriteLine(" ‘Should we? I think he’s the one that killed the girl, but is what he just said true? Will we be killed if we didn’t open the door? Was room-checking on the list that was announced?’ ");
+    Console.Write("‘No, room checking wasn’t on the list. And if what he said was true, then if we didn’t open the door, we will be killed next morning, but if we opened the door...’");
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.Write(" Vv smirked,");
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+    Console.WriteLine(" ‘We would be killed right away.’ ");
+    Console.WriteLine("‘So it’s your choice, the world’s kindest girl.’  ");
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("Molly turned her head around and stopped talking.  ");
+    Console.WriteLine("But you started to tremble, as you realized that the voice was familiar. It was the man that you have bumped into earlier today that’s outside. ");
+    Console.WriteLine("You quickly explained what happened earlier today to the others. ");
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+    Console.Write("‘Wait,’");
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.Write(" Vv stopped you, ");
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+    Console.WriteLine("‘So you gave your wristband to him,’ ");
+    Console.ForegroundColor = ConsoleColor.DarkYellow;
+    Console.WriteLine("Press any key to continue. . .");
+    Console.ReadLine();
+    if (main.Crew > 1)
+    {
+      return new Scene606();
+    }
+    else
+    {
+      return new Scene607();
+    }
+  }
+}
+public class Scene606 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.Green; 
+    Console.Write("‘But he gave it back right after. . .’");
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine(" You tried to explain yourself, but now you realized what you have done. ");
+    Console.Write("Vv quickly sat up,");
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+    Console.WriteLine(" ‘Are you an idiot?’ ");
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.Write("Molly also sat up, confused.");
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+    Console.WriteLine(" ‘It’s fine if he gave it back...’ ");
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("The sound of the door being unlocked stopped your conversations. ");
+    Console.ForegroundColor = ConsoleColor.DarkRed;
+    Console.WriteLine("‘Click’ ");
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+    Console.WriteLine("‘Well goodness, I almost forgot that I got keys for this cabin.’ ");
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("The man walked in. His blue crewmate suit had black stains on it, and he held a big, metal blade in his hand. ");
+    Console.WriteLine("The blade was also stained with blood.  ");
+    Console.ForegroundColor = ConsoleColor.DarkYellow;
+    Console.WriteLine("Press any key to continue. . .");
+    Console.ReadLine();
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+    Console.WriteLine("You are slayed by "); 
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+    Console.WriteLine(" [Crewmate]  "); 
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+    Console.WriteLine("You have won title "); 
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+    Console.WriteLine(" [The Door Opener] "); 
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("* * *"); 
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+    Console.WriteLine("Op: Retry (1) / Exit (2)");
+    return main.options(new Scene1(), new Scene0(), null);
+  }
+}
+public class Scene607 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.Green; 
+    Console.Write("‘No, no I didn’t.’ ");
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.Write("You are glad about your choice making skills. ");
+    Console.ForegroundColor = ConsoleColor.Green; 
+    Console.WriteLine("‘But he melted, right in front of me.’ ");
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("Molly whined again with fear. ");
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+    Console.Write("‘It’s alright then I wish. . . I just hope that the girl previously wasn’t your roommate,’");
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.Write(" Vv sighed, ");
+    Console.ForegroundColor = ConsoleColor.DarkGreen; 
+    Console.WriteLine(" ‘Or it was her, but her wristband is smashed into pieces.’ ");
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("You realized that problem too right when Vv mentioned it. You tensed up at the thought and prayed that it wasn't Kea. ");
+    Console.WriteLine("The three of you squeezed into the corner of the wall. ");
+    Console.WriteLine("Molly trembled at every smack of the door. ");
+    Console.WriteLine("The smacking and threatening continued for about half an hour, and it stopped. ");
+    Console.WriteLine("The three of you didn’t move for another 30 minutes. ");
+    Console.WriteLine(". . .");
+    Console.WriteLine("After making sure that no sounds were heard from outside the door, the three of you got back in bed and tried to slow down your heartbeat. ");
+    Console.WriteLine("Your leg was all numb and your back was soaked from your own sweat.");
+    Console.WriteLine("It was a sleepless night.  ");
+    Console.ForegroundColor = ConsoleColor.DarkYellow;
+    Console.WriteLine("Press any key to continue. . . ");
+    Console.ReadLine();
+    return new Scene608();
+  }
+}
+public class Scene608 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("The sound of your morning alarm scared you awake. ");
+    Console.WriteLine("It was 7 a.m. ");
+    Console.WriteLine("The three of you, all tired and stressed from last night, quickly cleaned up yourselves and stood at the doorstep. ");
+    Console.WriteLine("It's only about 2 hours until you can leave this ship.");
+    Console.WriteLine("None of you wanted to open the door, afraid that something was at the doorstep. ");
+    Console.WriteLine("You were afraid to see the crewman standing outside, but you were even more afraid to see Kea’s dead body. Even the thought of you leaving Kea to death makes your chest ache. ");
+    Console.WriteLine("Vv took a deep breath and tensely moved her hand towards the doorknob.  ");
+    Console.WriteLine("She unlocked the door with a clicking noise, and she cautiously only opened the door to a small gap. ");
+    Console.WriteLine("Nothing was outside, and you started to hear talking and the footsteps of other passengers who survived the night. ");
+    Console.WriteLine("Vv let out a breath and pulled the door open.  ");
+    Console.WriteLine("Nothing was outside.  ");
+    Console.WriteLine("No Kea, no man, no dead bodies. ");
+    Console.WriteLine("Only a pile of black water, gleaming with shimmers of red. ");
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+    Console.WriteLine("Press any key to continue. . . ");
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.ReadLine();
+    Console.Clear();
+    Console.WriteLine("During Breakfast, everyone noticed the obvious decrease of remaining survivors. ");
+    Console.WriteLine("Breakfast was waffles and milk. Some began eating but you decided to first join the conversations. ");
+    Console.WriteLine("People gathered to talk about things that happened last night. ");
+    Console.WriteLine("Many also had the knocking from the dead roommate, and almost everyone had the room check knock. ");
+    Console.WriteLine("The survivors were the ones that didn’t open the door. ");
+    Console.ForegroundColor = ConsoleColor.DarkGreen;
+    Console.Write("‘Goodness, we didn’t listen to Molly, we would’ve died.’");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine(" Vv whispered into your ears. ");
+    Console.WriteLine("You looked towards Molly; she gave a confused look back. ");
+    Console.WriteLine("‘My two roommates both died. . .they, they had worms coming out of them, it was everywhere. . .’");
+    Console.WriteLine("A girl's words attracted your mind to her.  ");
+    Console.WriteLine("She looked just like the first girl that died in the performance. She explained herself being the girl’s twin, her name is Brianne. But many people questioned her, as she was pale and had the same face as a dead. ");
+    Console.WriteLine("Just as people started to get excited about the theory that Brianne wasn’t human anymore and she killed her room mates, many others began also saying that they had the same experience as Brianne. ");
+    Console.WriteLine("People then quickly concluded to that the reason that some people was killed by worms was because of eating the little cake. Since in all the survivors, no one ate the desert from last night. ");
+    Console.ForegroundColor = ConsoleColor.DarkGreen;
+    Console.Write("‘But Madeleine didn’t!’");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.Write(" Brianne cried.  ");
+    Console.ForegroundColor = ConsoleColor.DarkGreen;
+    Console.WriteLine("‘She hates cake like me!’");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("Madeleine is one of Brianne’s roommates that died. ");
+    Console.WriteLine("People are all giving ‘maybes’, but none seemed very convincing. ");
+    Console.WriteLine("When people were going to give up and go to get breakfast, Vv stopped the others from walking away. ");
+    Console.ForegroundColor = ConsoleColor.DarkGreen;
+    Console.WriteLine("‘So, we know that it’s because of the food, so let’s list out which food was eaten, and which was not by us, the survivors. I know that I only had the soup from lunch and some snacks of my own, and that’s it.’ ");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("People began talking again, and quickly, people realized that eating any food that contains wheat will make the person grow worms and die. ");
+    Console.WriteLine("The people who just had the waffles gasped and their faces flashed white, and some tried to vomit the waffles out. ");
+    Console.WriteLine(". . . ");
+    Console.ForegroundColor = ConsoleColor.DarkGray;
+    Console.WriteLine("It is 7:55. ");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("Breakfast time ended with almost no one actually eating anything.  ");
+    Console.WriteLine("You had some milk, but the milk tasted bitter. ");
+    Console.WriteLine("You comforted yourself that you’re almost arrived, and the pain will be over. ");
+    Console.ForegroundColor = ConsoleColor.DarkYellow;
+    Console.WriteLine("Press any key to continue. . . ");
+    Console.ReadLine();
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("The next two hours were peaceful, everyone stayed together in the main hall and had small conversations. "); 
+    Console.WriteLine("You were the first one to see the dock. ");
+    Console.WriteLine("It’s the first time in hours that you have seen other living ships. Youreyes were watering with excitement. ");
+    Console.WriteLine("The land seemed normal with people, buildings, and vehicles.  ");
+    Console.WriteLine("The others seemed to also be very excited to arrive. ");
+    Console.WriteLine("The ship stopped and the sound of broadcasting arrival made you overjoyed. ");
+    Console.ForegroundColor = ConsoleColor.Blue;
+    Console.WriteLine("Attention passengers, ");
+    Console.WriteLine("We have arrived, please have all your belongings with you, remember to watch your steps on your way out.  "); 
+    Console.WriteLine("Thank you and have a wonderful journey. ");
+    Console.WriteLine(". . . ");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("You and the rest were eager to exit the ship. ");
+    Console.WriteLine("Molly was in tears, as she tried to explain her horror and what had happened on the ship to a man that was wearing a police uniform. ");
+    Console.WriteLine("The police ignored her and seemed to be used to seeing people being horrified when they exit the ship. ");
+    Console.WriteLine("Molly became upset by his actions and stopped trying to explain. ");
+    Console.WriteLine("The departure from the ship was somewhat quiet after that. "); 
+    Console.WriteLine("No one asked why there were only so many people coming out of such a huge ship. ");
+    Console.WriteLine("But you decided to ignore the many unusual things, you were tired and hungry, and you just didn’t want to care about anything anymore. ");
+    Console.WriteLine("You texted your homestay coordinator and you refused to exchange numbers with Molly and the other survivors. ");
+    Console.WriteLine("You were desperate to forget this memory and go on with your life. ");
+    Console.ForegroundColor = ConsoleColor.DarkYellow;
+    Console.WriteLine("Press any key to continue. . . ");
+    Console.ReadLine();
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("But Molly persisted in reporting what had happened. ");
+    Console.WriteLine("Everyone either ignored her or seemed confused and scared of her actions. ");
+    Console.WriteLine("Out of pity, you went over to try to help her and comfort her down. ");
+    Console.WriteLine("But she seemed to not see you at all, as her sight went right through you and to someone behind. ");
+    Console.WriteLine("You looked back. And that’s when she suddenly sprinted with excitement towards the ocean. ");
+    Console.WriteLine("With a loud splash she fell over the fence into the ocean. ");
+    Console.WriteLine("You ran over to see nothing in the ocean but ripples. You were about to yell for help. ");
+    Console.WriteLine("That’s when you realized no one seemed to notice her falling into the water but you.  ");
+    Console.WriteLine("Some people started to look at you with sights of disgust and confusion. ");
+    Console.WriteLine("You looked around yourself, trying to see anyone else that also saw Molly’s fall. ");
+    Console.WriteLine("A policeman came to ask you if you were alright. ");
+    Console.WriteLine("All the other survivors of the ship were gone, there were only the faces of strangers. ");
+    Console.WriteLine("You shook your head and stared at your shoes in confusion.  ");
+    Console.ForegroundColor = ConsoleColor.Red;
+    Console.WriteLine("[This cannot be a dream, can it?] ");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("Your hand nervously rubbed on the wristband with number 13 on it. ");
+    Console.ForegroundColor = ConsoleColor.DarkYellow;
+    Console.WriteLine("Press any key to continue. . .");
+    Console.ReadLine();
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+    Console.WriteLine("Congratulation you have survived. ");
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+    Console.WriteLine(" [Congratulation you have survived. ]");
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+    Console.WriteLine("You have won title "); 
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+    Console.WriteLine(" [Survivor] "); 
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("* * *"); 
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+    Console.WriteLine("Op: Play Again (1) / Exit (2)");
+    return main.options(new Scene1(), new Scene0(), null);
+  }
+}
+public class Scene609 : IScene { //Alone
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("Luckly Kea’s body wasn’t in the cabin. ");
+    Console.WriteLine("You listed out the cautions and rules the people discussed about, and after setting up and making sure you haven't disobeyed anything, you lay in your bed. ");
+    Console.WriteLine("The night came. ");
+    Console.WriteLine("You tried to go to sleep so you’re prepared for what might happen tomorrow. ");
+    Console.WriteLine("But you weren’t able to set your mind to peace, the fright today has been too much. ");
+    Console.WriteLine("The window curtains were open, a faint light of blue drifts in.  ");
+    Console.WriteLine("The reason the curtains weren’t closed was because the people figured from the broadcasting rules in the morning that it was better to keep the curtains open. ");
+    Console.WriteLine("But you felt very insecure as shadows flickered on the curtains.  ");
+    if (main.Worm == 1)
+    {
+      return new Scene701();
+    }
+    else
+    {
+      return new Scene7();
+    }
+  }
+}
+public class Scene7 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("Then a gush of pain in your stomach forced you to widen your eyes. "); 
+    Console.WriteLine("And another gush, and another.  "); 
+    Console.WriteLine("You decided that the pain was not ignorable, but goodness the cabins came with washrooms, and it’s only a few steps away from the bed. "); 
+    Console.WriteLine("You decide to  "); 
+    Console.ForegroundColor = ConsoleColor.DarkYellow;
+    Console.WriteLine("Op: Go to the washroom (1) / stay in bed (2) ");
+  return main.options(new Scene702(), new Scene703(), null);
+  }
+}
+public class Scene701 : IScene { ///Not finished
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("Suddenly, the cabin went dark. "); 
+    Console.WriteLine("Something is blocking the window. "); 
+    Console.WriteLine("You were shaking with fear, but you forced yourself to act calm. "); 
+    Console.WriteLine("You squeezed your eyes shut and tried to make your breathing not that tense. "); 
+    Console.WriteLine("You can feel the thing coming in through the window.  "); 
+    Console.WriteLine("And you began to feel cold air blowing on your face. "); 
+    Console.WriteLine("Uncontrollably, you opened your eyes a little. "); 
+    Console.WriteLine("A man wearing a black crewmate suit was staring at you through the window. "); 
+    Console.WriteLine("He had wrinkled face and eyes that looked as if they were soaked in water for days. "); 
+    Console.WriteLine("He had no mouth and no nose; a big hole was in the middle of his face. "); 
+    Console.WriteLine("You screamed with horror. "); 
+    Console.WriteLine("The man seemed to enjoy the fear in your voice. "); 
+    Console.WriteLine("You began shaking and you had forgotten all about what the rules had said. "); 
+    Console.WriteLine("Terrified, you scrambled up from your bed and ran towards the exit. "); 
+    Console.WriteLine("You pulled open the door and ran out to the hall. You went next door – cabin 15. "); 
+    Console.WriteLine("You began to bang on the door and scream for help, desperate to get to a safe place. "); 
+    Console.WriteLine("Although you knew someone was in that cabin, no one opened the door for you. "); 
+    Console.WriteLine("The monster began banging on the door of cabin 13 from inside.  "); 
+    Console.WriteLine("You began knocking on the next door, hoping for someone to let you in. "); 
+    Console.WriteLine("But no one did. "); 
+    Console.WriteLine("You deeply regretted your choice of being alone, even someone else who is running away with you might calm you down and look for a solution. "); 
+    Console.WriteLine("But you were all alone. "); 
+    Console.ForegroundColor = ConsoleColor.DarkYellow;
+    Console.WriteLine("Press any key to continue. . ." );
+    Console.ReadLine();
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("Your clothes are all wet now from sweating. " );
+    Console.WriteLine("Then you heard footsteps. Heavy footsteps. " );
+    Console.WriteLine("The hallway was dark and smelled like seawater, echoes of whimpering and the wind howling made you even more desperate to find peace. " );
+    Console.WriteLine("Your brain is all mushed from the many emotions you have, so you foolishly run towards where the footsteps came from, hoping that whoever is there is your savior. " );
+    Console.ForegroundColor = ConsoleColor.Green; 
+    Console.WriteLine("‘Help, help me, please, th...there’s a ghost in my cabin, please help me...’ " );
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("You ran towards the only man standing in the middle of the hall. " );
+    Console.WriteLine("He turned his face around, it looked like a human, you realized that he is the man that you’ve met earlier. " );
+    Console.WriteLine("He had the same crewmate suit on, with stains of black. The huge metal blade in his hand was still dripping down thick, red liquids.  " );
+    Console.WriteLine("He grinned as he held up the blade and gazed into your frightened, desperate eyes. " );
+    Console.ForegroundColor = ConsoleColor.DarkYellow;
+    Console.WriteLine("Press any key to continue. . ." );
+    Console.ReadLine();
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+    Console.WriteLine("You are slayed by "); 
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+    Console.WriteLine(" [Crewmate & Crewmate#2]  "); 
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+    Console.WriteLine("You have won title "); 
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+    Console.WriteLine(" [Alone Wolf] "); 
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("* * *"); 
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+    Console.WriteLine("Op: Retry (1) / Exit (2)");
+    return main.options(new Scene1(), new Scene0(), null);
+  }
+}
+public class Scene702 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("You pushed yourself up from the bed and walked towards the washroom. "); 
+    Console.WriteLine("You could feel things rolling in your stomach. "); 
+    Console.WriteLine("You felt it going up your throat. You kneeled in front of the toilet and started vomiting.  "); 
+    Console.WriteLine("But it won’t stop. You looked down in the toilet and fear filled your head. You want to scream and call for help, but no sound came out except for guggling. You began to regret being alone. "); 
+    Console.WriteLine("There are white, lumpy worms that’s all about a few inches long, swimming in the toilet water, and more and more are coming out from your mouth. ");
+    Console.WriteLine("You began to be more desparate as you began to feel these slimy things pushing through your eyes, nose and ears. ");
+    Console.WriteLine("With a few popping noises, you suddenly lost four out of your five senses, only pain was felt, and your world was fainting into darkness. ");
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+    Console.WriteLine("Press any key to continue...");
+    Console.ReadLine();
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+    Console.WriteLine("You are slayed by "); 
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+    Console.WriteLine(" [Wheatworm]  "); 
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+    Console.WriteLine("You have won title "); 
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+    Console.WriteLine(" [Noodle Monster] "); 
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("* * *"); 
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+    Console.WriteLine("Op: Retry (1) / Exit (2)");
+    return main.options(new Scene1(), new Scene0(), null);
+  }
+}
+public class Scene703 : IScene {
+  public IScene scene_contents() {
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("You forced yourself to stay, but moans came from your mouth."); 
+    Console.WriteLine("You can feel things rolling in your stomach. "); 
+    Console.WriteLine("A huge desire to vomit drowned you, you turned your face towards the ground. ");
+    Console.WriteLine("You felt things coming out of your mouth. ");
+    Console.WriteLine("It was white, lumpy worms that’s all about a few inches long, all alive and jumping on the cabin floor, some landing on the bed, and more and more are coming out from your mouth. ");
+    Console.WriteLine("You want to scream and call for help, but no sound came out except for guggling. You began to regret being alone.");
+    Console.WriteLine("Even more desperately, you felt more of these slimy things pushing through your eyes, nose and ears. ");
+    Console.WriteLine("With a few popping noises, you suddenly lost four out of your five senses, only pain was felt, and your world was fainting into darkness. ");
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+    Console.WriteLine("Press any key to continue...");
+    Console.ReadLine();
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+    Console.WriteLine("You are slayed by "); 
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+    Console.WriteLine(" [Wheatworm]  "); 
+    Console.ForegroundColor = ConsoleColor.DarkGray; 
+    Console.WriteLine("You have won title "); 
+    Console.ForegroundColor = ConsoleColor.Magenta; 
+    Console.WriteLine(" [Noodle Monster] "); 
+    Console.ForegroundColor = ConsoleColor.White; 
+    Console.WriteLine("* * *"); 
+    Console.ForegroundColor = ConsoleColor.DarkYellow; 
+    Console.WriteLine("Op: Retry (1) / Exit (2)");
+    return main.options(new Scene1(), new Scene0(), null);
+  }
+}
